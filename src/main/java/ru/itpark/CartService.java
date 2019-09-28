@@ -8,6 +8,9 @@ public class CartService {
     }
 
     public void add (Burger burger) {
-        amount += burger.getPrice();
+        add(burger, 1);
+    }
+    public void add (Burger burger, int count) {
+         amount += burger.getPrice() * count;
     }
 }
